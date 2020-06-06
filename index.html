@@ -1,2 +1,24 @@
-<h1>hello</h1>
-<p>nvm</p>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/apidoc.css?"">
+
+
+            **Digit-based problems**
+
+Programming problems on the digits of integers can be solved by
+
+- converting the integer to a string, or
+- using arithmetic operators such as integer division, `//` and remainder, `%` to extract digits and pare the number down.
+
+Here's the simplest possible example, one that prints the digits of the number backwards, one by one:
+
+~~~
+def printDigits(n):
+  while n > 0:
+    d = n % 10
+    print(d)
+    n //= 10
+~~~
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

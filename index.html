@@ -96,9 +96,11 @@ def digitPresent(n, x):
   return False
 ~~~
 
-Notice that we can conveniently work with the digits from right to left but not the other way around. One can write a helper that first reverses a number and then works on the digits of the reversed number from right to left. This is effectively like working on the original number from the leftmost digit forward. However, writing this function is a bit more complex; we need to build up a new number `m` as we decimate `n`.
+Notice that we can conveniently work with the digits from right to left but not the other way around. One can write a helper that first reverses a number and then works on the digits of the reversed number from right to left. This is effectively like working on the original number from the leftmost digit forward. However, writing this function is a bit more complex; we need to build up a new number `m` as we decimate `n`.[^1]
 
 TODO
+
+[^1]: Of course, if you were allowed to use lists, it would be a simple matter of putting all the digits in a list and then iterating over it backwards. But we're assuming that we're not allowed to use strings or lists for these problems.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

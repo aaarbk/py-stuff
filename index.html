@@ -5,8 +5,21 @@
 
 Programming problems on the digits of integers can be solved by
 
-- converting the integer to a string, or
-- using arithmetic operators such as integer division, `//` and remainder, `%` to extract digits and pare the number down.
+1. converting the integer to a string, or
+2. using arithmetic operators such as integer division, `//` and remainder, `%` to extract digits and pare the number down.
+
+Method 1 allows one to use string indexing and slicing to extract the digits and manipulate them. For example, if `n = 1234`, and taking `m = str(n)` we have:
+
+- `m[0]` => `'1'`, giving us the leading digit
+- `m[-1]` => `'4'`, giving us the trailing digit
+- `m[::-2]` => `'4321'` is number-string reversed, etc.
+
+Bear in mind that the result of the above operations is a string again (Python doesn't  magically  convert it back to an integer just  because they  happen to be digits), so typically you would want to convert the result back to an integer when you're done.
+
+Method 2 is the one you really need to be familiar with. In simplest terms, given an integer `n`:
+1. `n % 10` lets us extract the last digit (`1234/10` => `4`)
+2. `n // 10` gives us what remains when the last digit is chopped off (`1234%10` => `123`)
+3. Do the above two steps in a loop (as explained below) and you can process the entire number digit by digit starting at the end.
 
 Here's the simplest possible example, one that prints the digits of the number backwards, one by one:
 

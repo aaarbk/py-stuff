@@ -6,13 +6,13 @@
 Programming problems on the digits of integers can be solved by
 
 1. converting the integer to a string, or
-2. using arithmetic operators such as integer division, `//` and remainder, `%` to extract digits and pare the number down.
+2. using arithmetic operators such as  remainder, `%` and integer division, '//' that allow us to perform digit-by-digit manipulation.
 
 Method 1 allows one to use string indexing and slicing to extract the digits and manipulate them. For example, if `n = 1234`, and taking `m = str(n)` we have:
 
 - `m[0]` => `'1'`, giving us the leading digit
 - `m[-1]` => `'4'`, giving us the trailing digit
-- `m[::-2]` => `'4321'` is number-string reversed, etc.
+- `m[::-1]` => `'4321'` is number-string reversed, etc.
 
 Bear in mind that the result of the above operations is a string again (Python doesn't  magically  convert it back to an integer just  because they  happen to be digits), so typically you would want to convert the result back to an integer when you're done.
 

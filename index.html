@@ -93,7 +93,7 @@ def digitPresent(n, x):
     n //= 10
   
   # If execution reaches this point, then the digit wasn't found
-  return True
+  return False
 ~~~
 
 Notice that we can conveniently work with the digits from right to left but not the other way around. One can write a helper that first reverses a number and then works on the digits of the reversed number from right to left. This is effectively like working on the original number from the leftmost digit forward. However, writing this function is a bit more complex; we need to build up a new number `m` as we decimate `n`.
